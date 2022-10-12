@@ -1,4 +1,6 @@
-const arrNumb = [1,3,5,7,9];
+const {minArr,maxArr,avg,leng}=require('./array')
 
-let result= {};
-
+test("MIN Array test", () => {
+    expect(minArr(2, 3,2,5,7,8)).toBe(2);
+  });
+  
