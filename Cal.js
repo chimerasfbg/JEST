@@ -5,8 +5,8 @@ const arString = "Argument is string";
 const moreArg = "Add more arguments";
 
 function addCalculator() {
-  if (arguments <= 1) {
-    throw moreArg;
+  if (arguments.length <= 1) {
+    throw new Error('Add more argument');
   } else {
     let count = Array.from(arguments);
     return count.reduce(function (acc, cur) {
@@ -17,7 +17,7 @@ function addCalculator() {
 
 function devCalculator(a, b) {
   if(b == 0){
-    throw "Number is zero"
+    throw new Error('Zero')
   } else{
     return a / b;
   }
@@ -25,7 +25,12 @@ function devCalculator(a, b) {
 }
 
 function multiCalculator(a, b) {
-  return a * b;
+  if(typeof a === 'string'||typeof b === 'string'){
+    throw new Error('YOu must use numbers')
+  } else {
+    return a * b;
+  }
+  
 }
 
 function subCalculator(a, b) {
