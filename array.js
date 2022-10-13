@@ -1,21 +1,36 @@
 const arrNumb = [1, 3, 5, 7, 9];
 
-let result = {};
+function Analyze(arrayOfNum){
+  
+    let result = {}
 
-function minArr(arrNumb) {
-  return Math.min(arrNumb)
+    result.minimum = Math.min(...arrayOfNum)
+    result.maximum = Math.max(...arrayOfNum)
+    result.leng = arrayOfNum.length
+    result.avg = arrayOfNum.reduce((a, b) => a + b, 0) / arrayOfNum.length;
+  return result 
 }
 
-function maxArr(arrNumb) {
-  return Math.max(arrNumb);
-}
+// function minArr(arrNumb) {
+//   return Math.min(arrNumb)
+// }
 
-function avg(arrNumb) {
-  return Math.avg(arrNumb);
-}
+// function maxArr(arrNumb) {
+//   return Math.max(arrNumb);
+// }
 
-function leng(arrNumb) {
-  return arrNumb.length;
-}
+// function avg(arrNumb) {
+//   return Math.avg(arrNumb);
+// }
 
-module.exports = { minArr, maxArr, avg, leng };
+// function leng(arrNumb) {
+//   return arrNumb.length;
+// }
+
+// function resultt(){
+//   return result = minArr()
+// }
+
+module.exports = {Analyze};
+
+// minArr, maxArr, avg, leng,resultt,
